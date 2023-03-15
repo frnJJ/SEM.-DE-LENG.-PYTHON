@@ -21,10 +21,14 @@ for i in range(0, times):
     # Le pedimos al usuario el resultado
     result = int(input("resultado: "))
     match operator:
-        case "+": real_res = number_1 + number_2
-        case "-": real_res = number_1 - number_2
-        case "*": real_res = number_1 * number_2
-        case "//": real_res = number_1 // number_2
+        case "+": 
+            real_res = number_1 + number_2
+        case "-": 
+            real_res = number_1 - number_2
+        case "*": 
+            real_res = number_1 * number_2
+        case "//":
+            real_res = number_1 // number_2
     if (result == real_res):
         print("El resultado fue correcto")
         res_correc += 1
