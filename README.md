@@ -1,2 +1,2 @@
-NOMBRE : Francisco Manuel Jorge /n
+NOMBRE : Francisco Manuel Jorge 
 Nro de alumno: 21209/4
