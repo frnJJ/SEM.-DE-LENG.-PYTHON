@@ -26,7 +26,7 @@ for i in range(0, times):
         case "-": 
             real_res = number_1 - number_2
         case "*": 
-            real_res = number_1 * number_2
+            real_res = number_1*number_2
         case "//":
             real_res = number_1 // number_2
     if (result == real_res):
