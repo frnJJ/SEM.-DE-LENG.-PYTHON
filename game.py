@@ -3,13 +3,13 @@ from datetime import datetime
 
 # Operadores posibles
 operators = ["+", "-", "*", "//"]
-# Cantidad de cuentas a resolver
 times = 5
+# Cantidad de cuentas a resolver
 res_correc = 0
 res_wro = 0
 # Contador inicial de tiempo.
-# Esto toma la fecha y hora actual.
 init_time = datetime.now()
+# Esto toma la fecha y hora actual.
 print(f"¡Veremos cuanto tardas en responder estas {times} operaciones!")
 for i in range(0, times):
     # Se eligen números y operador al azar
@@ -20,17 +20,19 @@ for i in range(0, times):
     print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?")
     # Le pedimos al usuario el resultado
     result = int(input("resultado: "))
-    match operator:
-        case "+": 
-            real_res = number_1 + number_2
-        case "-": 
-            real_res = number_1 - number_2
-        case "*": 
-            real_res = number_1*number_2
-        case "//":
-            if (number_2 != 0):
-                real_res = number_1 // number_2
-    if (result == real_res):
+    if operator == '+':
+        real_res = number_1 + number_2
+    elif operator == '-':
+        real_res = number_1 - number_2
+    elif operator == '*':
+        real_res = number_1 * number_2
+    else:
+        if number_2 != 0:
+            real_res = number_1 // number_2
+        else: 
+            print("No se puede dividir por 0")
+            real_res = 0
+    if result == real_res:
         print("El resultado fue correcto")
         res_correc += 1
     else:
