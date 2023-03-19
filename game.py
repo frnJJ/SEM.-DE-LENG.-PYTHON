@@ -31,7 +31,7 @@ for i in range(0, times):
             if (number_2 != 0):
                 real_res = number_1 // number_2
             else:
-                print('NO SE PUEDE DIVIR POR 0')
+                print('NO SE PUEDE DIVIDIR POR 0')
     if result == real_res:
         print("El resultado fue correcto")
         res_correc += 1
