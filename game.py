@@ -2,7 +2,7 @@ from random import choice, randrange
 from datetime import datetime
 
 # Operadores posibles
-operators = ["+", "-", "*", "//"]
+operators = ["+", "-", "*", "/"]
 times = 5
 # Cantidad de cuentas a resolver
 res_correc = 0
@@ -20,18 +20,18 @@ for i in range(0, times):
     print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?")
     # Le pedimos al usuario el resultado
     result = int(input("resultado: "))
-    if operator == '+':
-        real_res = number_1 + number_2
-    elif operator == '-':
-        real_res = number_1 - number_2
-    elif operator == '*':
-        real_res = number_1 * number_2
-    else:
-        if number_2 != 0:
-            real_res = number_1 // number_2
-        else: 
-            print("No se puede dividir por 0")
-            real_res = 0
+    match operator :
+        case "+":
+            real_res = number_1 + number_2
+        case "-":
+            real_res = number_1 - number_2
+        case "*":
+            real_res = number_1 * number_2
+        case "/": 
+            if (number_2 != 0):
+                real_res = number_1 // number_2
+            else:
+                print('NO SE PUEDE DIVIR POR 0')
     if result == real_res:
         print("El resultado fue correcto")
         res_correc += 1
